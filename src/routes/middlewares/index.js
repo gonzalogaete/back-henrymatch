@@ -1,3 +1,5 @@
+const Interest = require("../../db/models/Interest");
+
 const axios = require("axios").default;
 
 module.exports = {
@@ -24,4 +26,21 @@ module.exports = {
         })
     }
   },
+
+  getInterest: async(req,res,next)=>{
+    try{
+      const interest = await Interest.findAll();
+      const allInterest = [...interest]
+      if(!name){
+        return allInterest;
+      }else{
+        return allInterest.filter((p) => p.name.includes(name));
+      }
+    }catch(err){
+      res.status(400).send({
+        error: err.code,
+        description:err.message,
+      })
+    }
+  }
 };

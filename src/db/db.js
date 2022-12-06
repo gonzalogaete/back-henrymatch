@@ -2,6 +2,7 @@ require("dotenv").config();
 const { Sequelize } = require("sequelize");
 const fs = require("fs");
 const path = require("path");
+const Interest = require("./models/Interest");
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME, DB_PORT } = process.env;
 
 const sequelize = new Sequelize(
@@ -42,6 +43,9 @@ const { } = sequelize.models;
 
 // Aca vendrian las relaciones
 // Product.hasMany(Reviews);
+
+Interest.belongsToMany(User, {through: "Interes_Usuario" });
+User.belongsToMany(Interest, {through: "Interes_Usuario" });
 
 
 module.exports = {
