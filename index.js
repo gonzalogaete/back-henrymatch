@@ -1,20 +1,13 @@
 const server = require("./src/app.js");
 const { conn } = require("./src/db.js");
-const createAllProducts = require("./src/dbControllers/index");
-
+const { PORT } = process.env || 3001;
 // Syncing all the models at once.
 
-async function main() {
-  try {
-    conn.sync({ force: true }).then(async () => {
-      await createAllProducts();
-      server.listen(process.env.PORT || 3001, async () => {
-        console.log("%s listening at 3001"); // eslint-disable-line no-console
-      });
+conn
+  .sync({ force: true })
+  .then(() => {
+    server.listen(PORT, () => {
+      console.log("%s listening at ", PORT); // eslint-disable-line no-console
     });
-  } catch (error) {
-    console.error("Unable to connect to the database:", error);
-  }
-}
-
-main();
+  })
+  .catch((e) => console.error("Unable to connect to the database:", e));
