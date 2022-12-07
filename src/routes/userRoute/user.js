@@ -5,9 +5,9 @@ const axios = require("axios").default;
 
 const router = Router();
 
-router.get("/users", getAllUsers);
+router.get("/get", getAllUsers);
 
-router.get("/save", getUser, saveUser);
+router.post("/save", getUser, saveUser);
 
 router.get("/interest", getInterest, async (req, res) => {
   res.send(req.interest);

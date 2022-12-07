@@ -8,11 +8,30 @@ module.exports = (sequelize) => {
       name: {
         type: DataTypes.STRING(20),
         allowNull: false,
-        unique: true,
       },
-      interests: {
-        type: DataTypes.ARRAY(DataTypes.JSON),
+      firstname: {
+        type: DataTypes.STRING(20),
+        allowNull: false,
       },
+      lastname: {
+        type: DataTypes.STRING(20),
+        allowNull: false,
+      },
+      nickname: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      picture: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      email: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      // interests: {
+      //   type: DataTypes.ARRAY(DataTypes.JSON),
+      // },
     },
     {
       timestamps: false,
