@@ -17,19 +17,27 @@ module.exports = {
   getAllUsers: async (req, res) => {
     try {
       const users = await User.findAll();
-      res.json(users)
+      res.json(users);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   },
   saveUser: async (req, res) => {
     try {
-      // const {} = req.body
-      console.log(req.body);
+      const {
+        name,
+        given_name: firstname,
+        family_name: lastname,
+        nickname,
+        picture,
+        email,
+      } = req.body;
+      const obj = { name, firstname, lastname, nickname, picture, email };
       const [user, created] = await User.findOrCreate({
-        where: { ...req.body },
+        where: obj,
       });
-      res.json(req.user);
+      console.log("recibí la data", created);
+      res.json(user);
     } catch (error) {
       console.log(error);
     }
