@@ -31,15 +31,36 @@ module.exports = {
         nickname,
         picture,
         email,
-      } = req.body;
+      } = req.user;
       const obj = { name, firstname, lastname, nickname, picture, email };
       const [user, created] = await User.findOrCreate({
         where: obj,
       });
-      console.log("recibí la data", created);
+      console.log("el usuario fue creado?:", created ? "sí" : "no, ya existe en la base de datos");
       res.json(user);
     } catch (error) {
       console.log(error);
+    }
+  },
+  searchUser: async (req, res) => {
+    try {
+      const { nickname } = req.user;
+      const user = await User.findOne({ where: { nickname } });
+      res.json(user);
+    } catch (error) {
+      console.log(error);
+    }
+  },
+  updateUser: async (req, res) => {
+    try {
+      const { nickname } = req.user;
+      const {linkedIn, gitHub, description} = req.body
+      console.log(req.body)
+      const user = await User.findOne({ where: { nickname } });
+      await user.update(req.body)
+      res.json({message: `El usario ${req.user.given_name} fue actualizado.` })
+    } catch (error) {
+      console.log(error)
     }
   },
 };
