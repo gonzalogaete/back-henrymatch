@@ -29,6 +29,22 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
+      linkedIn: {
+        type: DataTypes.STRING,
+        defaultValue: undefined
+      },
+      gitHub: {
+        type: DataTypes.STRING,
+        defaultValue: undefined
+      },
+      portfolio: {
+        type: DataTypes.STRING,
+        defaultValue: undefined
+      },
+      description: {
+        type: DataTypes.STRING,
+        defaultValue: undefined
+      },
       // interests: {
       //   type: DataTypes.ARRAY(DataTypes.JSON),
       // },
