@@ -8,10 +8,10 @@ module.exports = {
       cache: true,
       rateLimit: true,
       jwksRequestsPerMinute: 5,
-      jwksUri: "https://barv.us.auth0.com/.well-known/jwks.json",
+      jwksUri: "https://barv11.us.auth0.com/.well-known/jwks.json",
     }),
-    audience: "this is a unique identifier",
-    issuer: "https://barv.us.auth0.com/",
+    audience: "http://localhost:3001/barv",
+    issuer: "https://barv11.us.auth0.com/",
     algorithms: ["RS256"],
   }).unless({ path: ["/"] }),
   getAllUsers: async (req, res) => {
@@ -32,11 +32,22 @@ module.exports = {
         picture,
         email,
       } = req.user;
-      const obj = { name, firstname, lastname, nickname, picture, email };
+      let data = { name, nickname, picture, email };
+      if (firstname) {
+        data = { ...data, firstname };
+      } else {
+        data = { ...data, firstname: nickname, name: nickname };
+      }
+      if (lastname) {
+        data = { ...data, lastname };
+      }
       const [user, created] = await User.findOrCreate({
-        where: obj,
+        where: data,
       });
-      console.log("el usuario fue creado?:", created ? "sí" : "no, ya existe en la base de datos");
+      console.log(
+        "el usuario fue creado?:",
+        created ? "sí" : "no, ya existe en la base de datos"
+      );
       res.json(user);
     } catch (error) {
       console.log(error);
@@ -54,13 +65,35 @@ module.exports = {
   updateUser: async (req, res) => {
     try {
       const { nickname } = req.user;
-      const {linkedIn, gitHub, description} = req.body
-      console.log(req.body)
+      const { country, state, linkedIn, gitHub, portfolio, description } =
+        req.body;
+      let data = {};
+      if (country) {
+        data = { ...data, country };
+      }
+      if (state) {
+        data = { ...data, state };
+      }
+      if (linkedIn) {
+        data = { ...data, linkedIn };
+      }
+      if (gitHub) {
+        data = { ...data, gitHub };
+      }
+      if (portfolio) {
+        data = { ...data, portfolio };
+      }
+      if (description) {
+        data = { ...data, description };
+      }
+      console.log(data);
       const user = await User.findOne({ where: { nickname } });
-      await user.update(req.body)
-      res.json({message: `El usario ${req.user.given_name} fue actualizado.` })
+      await user.update(data);
+      res.json({
+        message: `Los datos fueron actualizados.`,
+      });
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   },
 };
