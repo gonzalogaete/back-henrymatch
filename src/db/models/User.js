@@ -11,11 +11,9 @@ module.exports = (sequelize) => {
       },
       firstname: {
         type: DataTypes.STRING(20),
-        allowNull: false,
       },
       lastname: {
         type: DataTypes.STRING(20),
-        allowNull: false,
       },
       nickname: {
         type: DataTypes.STRING,
@@ -31,19 +29,21 @@ module.exports = (sequelize) => {
       },
       linkedIn: {
         type: DataTypes.STRING,
-        defaultValue: undefined
       },
       gitHub: {
         type: DataTypes.STRING,
-        defaultValue: undefined
       },
       portfolio: {
         type: DataTypes.STRING,
-        defaultValue: undefined
       },
       description: {
         type: DataTypes.STRING,
-        defaultValue: undefined
+      },
+      country: {
+        type: DataTypes.STRING,
+      },
+      state: {
+        type: DataTypes.STRING,
       },
       // interests: {
       //   type: DataTypes.ARRAY(DataTypes.JSON),
