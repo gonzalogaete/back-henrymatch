@@ -4,7 +4,7 @@ const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const routes = require("./routes/index.js");
-const { jwtCheck } = require("./routes/controllers/index");
+// const { jwtCheck } = require("./routes/controllers/index");
 
 require("./db/db.js");
 
@@ -13,7 +13,7 @@ server.use(cors());
 
 server.name = "API";
 
-server.use(jwtCheck);
+// server.use(jwtCheck);
 server.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 server.use(bodyParser.json({ limit: "50mb" }));
 server.use(cookieParser());
