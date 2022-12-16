@@ -43,10 +43,5 @@
         "id": 9,
        "question": "¿Que hobby practicas?",
        "answers": ["Tocar un instrumento","Hacer algun deporte","Viajar", "Jugar videojuegos", "Escribir", "Bailar", "Escuchar música", "Coleccionar objetos",     "Yoga", "Pintar", "Voluntariado", "Juegos de mesa"]
-    },
-    {
-        "id": 10,
-       "question": "¿Que hobby practicas?",
-       "answers": ["Tocar un instrumento","Hacer algun deporte","Viajar", "Jugar videojuegos", "Escribir", "Bailar", "Escuchar música", "Coleccionar objetos",     "Yoga", "Pintar", "Voluntariado", "Juegos de mesa"]
     }
 ]
