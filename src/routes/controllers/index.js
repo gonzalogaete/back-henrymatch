@@ -56,8 +56,12 @@ module.exports = {
   searchUser: async (req, res) => {
     try {
       const { nickname } = req.user;
-      const user = await User.findOne({ where: { nickname } });
-      res.json(user);
+      let user = await User.findOne({ where: { nickname } });
+      if (!user) {
+        res.json({});
+      } else {
+        res.json(user);
+      }
     } catch (error) {
       console.log(error);
     }
