@@ -1,25 +1,19 @@
-const { expressjwt: jwt } = require("express-jwt");
-const jwks = require("jwks-rsa");
 const { User } = require("../../db/db");
 
 module.exports = {
-  jwtCheck: jwt({
-    secret: jwks.expressJwtSecret({
-      cache: true,
-      rateLimit: true,
-      jwksRequestsPerMinute: 5,
-      jwksUri: "https://barv11.us.auth0.com/.well-known/jwks.json",
-    }),
-    audience: "http://localhost:3001/barv",
-    issuer: "https://barv11.us.auth0.com/",
-    algorithms: ["RS256"],
-  }).unless({ path: ["/"] }),
   getAllUsers: async (req, res) => {
     try {
       const users = await User.findAll();
-      res.json(users);
+      res.status(200).json({
+        data: users,
+        status: users.length ? "USERS_FOUND" : "USERS_EMPTY",
+      });
     } catch (error) {
       console.log(error);
+      res.status(404).send({
+        code: error.code,
+        message: error.message,
+      });
     }
   },
   saveUser: async (req, res) => {
@@ -44,26 +38,48 @@ module.exports = {
       const [user, created] = await User.findOrCreate({
         where: data,
       });
-      console.log(
-        "el usuario fue creado?:",
-        created ? "sí" : "no, ya existe en la base de datos"
-      );
-      res.json(user);
+      res.status(201).json({
+        data: user,
+        status: created ? "USER_CREATED" : "USER_EXIST",
+      });
     } catch (error) {
       console.log(error);
+      res.status(404).send({
+        code: error.code,
+        message: error.message,
+      });
     }
   },
   searchUser: async (req, res) => {
     try {
       const { nickname } = req.user;
       let user = await User.findOne({ where: { nickname } });
-      if (!user) {
-        res.json({});
-      } else {
-        res.json(user);
-      }
+      res.status(202).json({
+        data: user ? user : {},
+        status: user ? "USER_FOUND" : "USER_NOT_FOUND",
+      });
     } catch (error) {
       console.log(error);
+      res.status(404).send({
+        code: error.code,
+        message: error.message,
+      });
+    }
+  },
+  searchUserById: async (req, res) => {
+    try {
+      const { id } = req.params;
+      const user = await User.findByPk(id);
+      res.status(202).json({
+        data: user ? user : {},
+        status: user ? "USER_FOUND_BY_ID" : "USER_NOT_FOUND_BY_ID",
+      });
+    } catch (error) {
+      console.log(error);
+      res.status(404).send({
+        code: error.code,
+        message: error.message,
+      });
     }
   },
   updateUser: async (req, res) => {
@@ -90,14 +106,18 @@ module.exports = {
       if (description) {
         data = { ...data, description };
       }
-      console.log(data);
       const user = await User.findOne({ where: { nickname } });
       await user.update(data);
       res.json({
-        message: `Los datos fueron actualizados.`,
+        data: user,
+        status: "USER_UPDATED",
       });
     } catch (error) {
       console.log(error);
+      res.status(404).send({
+        code: error.code,
+        message: error.message,
+      });
     }
   },
 };
