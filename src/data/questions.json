@@ -1,47 +1,139 @@
 [
-    {
-        "id": 1,
-       "question": "¿Que lenguaje de programación dominas?",
-       "answers": ["C#","Typescript","Javascript","Java","C++","PHP","Python"]
-    },
-    {
-        "id": 2,
-       "question": "¿Que lenguaje de programación te gustaria aprender?",
-       "answers": ["C#","Typescript","Javascript","Java","C++","PHP","Python"]
-    },
-    {
-        "id": 3,
-       "question": "¿Que tipo de stack te sientes más comodo?",
-       "answers": ["Back-end", "Full Stack","Front-end"]
-    },
-    {
-        "id": 4,
-       "question": "¿Que tecnologias manjeas?",
-       "answers": ["React Native", "React Js","Angular","Vue","Express","Sequelize","Prisma","Redux","Bootstrap","Tailwind","ASP.NET","Django","Next js","jQuery", "MySQL", "MongoDB"]
-    },
-    {
-        "id": 5,
-       "question": "¿Que idiomas te gustaría aprender?",
-       "answers": ["Inglés","Portugués","Aleman","Frances","Italiano","Japones","Chino"]
-    },
-    {
-        "id": 6,
-       "question": "¿Que deportes practicas?",
-       "answers": ["Senderismo","Ciclismo","Fútbol","Baloncesto","Volleyball","Alpinismo","Halterofilia", "Gimasio","Ninguno"]
-    },
-    {
-        "id": 7,
-       "question": "¿Que géneros de música te gustan?",
-       "answers": ["Rock", "Pop","Jazz","Clásico","Reggaeton","Chill & Lo-fi","Balada","Ska", "Reggae"]
-    },
-    {
-        "id": 8,
-       "question": "¿Que generos de peliculas te gustan?",
-       "answers": ["Aventuras","Acción","Comedia","Documental", "Drama", "Fantasía",  "Musical","Suspenso","Terror","Animación","Bélicas", "Futuristas", "Crimen", "Ninguno"]
-    },
-    {
-        "id": 9,
-       "question": "¿Que hobby practicas?",
-       "answers": ["Tocar un instrumento","Hacer algun deporte","Viajar", "Jugar videojuegos", "Escribir", "Bailar", "Escuchar música", "Coleccionar objetos",     "Yoga", "Pintar", "Voluntariado", "Juegos de mesa"]
-    }
+  {
+    "id": 1,
+    "question": "¿Qué lenguajes de programación manejas?",
+    "answers": [
+      "C#",
+      "Typescript",
+      "Javascript",
+      "Java",
+      "C++",
+      "PHP",
+      "Python"
+    ]
+  },
+  {
+    "id": 2,
+    "question": "¿Qué lenguajes de programación te gustaria aprender?",
+    "answers": [
+      "C#",
+      "Typescript",
+      "Javascript",
+      "Java",
+      "C++",
+      "PHP",
+      "Python"
+    ]
+  },
+  {
+    "id": 3,
+    "question": "¿A qué stack te inclinas más?",
+    "answers": ["Back-end", "Full Stack", "Front-end"]
+  },
+  {
+    "id": 4,
+    "question": "¿Qué tecnologias manejas?",
+    "answers": [
+      "React Native",
+      "React Js",
+      "Angular",
+      "Vue",
+      "Express",
+      "Sequelize",
+      "Prisma",
+      "Redux",
+      "Bootstrap",
+      "Tailwind",
+      "ASP.NET",
+      "Django",
+      "Next js",
+      "jQuery",
+      "MySQL",
+      "MongoDB"
+    ]
+  },
+  {
+    "id": 5,
+    "question": "¿Qué idiomas te gustaría aprender o sabes?",
+    "answers": [
+      "Inglés",
+      "Portugués",
+      "Alemán",
+      "Francés",
+      "Italiano",
+      "Japonés",
+      "Chino"
+    ]
+  },
+  {
+    "id": 6,
+    "question": "¿Qué deportes practicas?",
+    "answers": [
+      "Senderismo",
+      "Ciclismo",
+      "Fútbol",
+      "Baloncesto",
+      "Volleyball",
+      "Alpinismo",
+      "Atletismo",
+      "Calistenia",
+      "Natación",
+      "Halterofilia",
+      "Gimasio",
+      "Ninguno"
+    ]
+  },
+  {
+    "id": 7,
+    "question": "¿Qué géneros de música te gustan?",
+    "answers": [
+      "Rock",
+      "Pop",
+      "Jazz",
+      "Clásico",
+      "Reggaeton",
+      "Chill & Lo-fi",
+      "Balada",
+      "Ska",
+      "Reggae"
+    ]
+  },
+  {
+    "id": 8,
+    "question": "¿Qué generos de películas te gustan?",
+    "answers": [
+      "Aventuras",
+      "Acción",
+      "Comedia",
+      "Documental",
+      "Drama",
+      "Fantasía",
+      "Musical",
+      "Suspenso",
+      "Terror",
+      "Animación",
+      "Bélicas",
+      "Futuristas",
+      "Crimen",
+      "Ninguno"
+    ]
+  },
+  {
+    "id": 9,
+    "question": "¿Qué hobby practicas?",
+    "answers": [
+      "Tocar un instrumento",
+      "Hacer algun deporte",
+      "Viajar",
+      "Jugar videojuegos",
+      "Escribir",
+      "Bailar",
+      "Escuchar música",
+      "Coleccionar objetos",
+      "Yoga",
+      "Pintar",
+      "Voluntariado",
+      "Juegos de mesa"
+    ]
+  }
 ]
