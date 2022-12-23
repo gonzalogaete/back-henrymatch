@@ -39,7 +39,7 @@ module.exports = {
         where: data,
       });
       res.status(201).json({
-        data: user,
+        data: user ? user : {},
         status: created ? "USER_CREATED" : "USER_EXIST",
       });
     } catch (error) {
@@ -109,8 +109,25 @@ module.exports = {
       const user = await User.findOne({ where: { nickname } });
       await user.update(data);
       res.json({
-        data: user,
+        data: user ? user : {},
         status: "USER_UPDATED",
+      });
+    } catch (error) {
+      console.log(error);
+      res.status(404).send({
+        code: error.code,
+        message: error.message,
+      });
+    }
+  },
+  saveInterests: async (req, res) => {
+    try {
+      const { nickname } = req.user; 
+      const user = await User.findOne({ where: { nickname } });
+      await user.update({ interests: req.body }); 
+      res.json({
+        data: user ? user : {},
+        status: "INTERESTS_SAVED",
       });
     } catch (error) {
       console.log(error);

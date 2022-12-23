@@ -6,6 +6,7 @@ const {
   searchUser,
   updateUser,
   searchUserById,
+  saveInterests,
 } = require("./../controllers");
 
 const middlewares = [jwtCheck, getUser];
@@ -22,8 +23,10 @@ router.post("/save", middlewares, saveUser);
 
 router.post("/update", middlewares, updateUser);
 
-router.get("/interest", getInterest, async (req, res) => {
+router.get("/interests", getInterest, async (req, res) => {
   res.send(req.interest);
 });
+
+router.post("/interests", middlewares, saveInterests);
 
 module.exports = router;

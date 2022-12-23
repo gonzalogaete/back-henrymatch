@@ -45,9 +45,9 @@ module.exports = (sequelize) => {
       state: {
         type: DataTypes.STRING,
       },
-      // interests: {
-      //   type: DataTypes.ARRAY(DataTypes.JSON),
-      // },
+      interests: {
+        type: DataTypes.ARRAY(DataTypes.JSON),
+      },
     },
     {
       timestamps: false,

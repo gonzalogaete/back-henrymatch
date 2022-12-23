@@ -1,8 +1,9 @@
 const { Router } = require("express");
 const { Question } = require("../../db/db.js");
 const router = Router();
+const { jwtCheck } = require("../middlewares/index");
 
-router.get("/all", async (req, res) => {
+router.get("/all", jwtCheck, async (req, res) => {
   try {
     const allQuestions = await Question.findAll();
     res.status(200).send(allQuestions);
