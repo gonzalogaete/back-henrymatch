@@ -4,7 +4,45 @@
     "firstname": "LocuraUno",
     "lastname": "LocuronaUno",
     "nickname": "LocuraUno3000",
-    "picture": "https://assets.stickpng.com/images/585e4bd7cb11b227491c3397.png",
+    "picture": "https://api.multiavatar.com/locurauno.svg",
+    "interests": [
+      {
+        "questions": "¿Qué lenguajes de programación manejas?",
+        "answers": ["Typescript", "C#"]
+      },
+      {
+        "questions": "¿Qué lenguajes de programación te gustaria aprender?",
+        "answers": ["Javascript", "Typescript"]
+      },
+      {
+        "questions": "¿A qué stack te inclinas más?",
+        "answers": ["Back-end", "Full Stack"]
+      },
+      {
+        "questions": "¿Qué tecnologias manejas?",
+        "answers": ["React Js", "Redux", "Bootstrap", "jQuery"]
+      },
+      {
+        "questions": "¿Qué idiomas te gustaría aprender o sabes?",
+        "answers": ["Portugués", "Inglés", "Chino"]
+      },
+      {
+        "questions": "¿Qué deportes practicas?",
+        "answers": ["Calistenia", "Senderismo", "Atletismo", "Ciclismo"]
+      },
+      {
+        "questions": "¿Qué géneros de música te gustan?",
+        "answers": ["Reggae", "Ska", "Rock"]
+      },
+      {
+        "questions": "¿Qué generos de películas te gustan?",
+        "answers": ["Crimen", "Musical"]
+      },
+      {
+        "questions": "¿Qué hobby practicas?",
+        "answers": ["Voluntariado", "Pintar"]
+      }
+    ],
     "email": "locuraUno.3000@hotmail.com"
   },
   {
@@ -12,7 +50,45 @@
     "firstname": "LocuraDos",
     "lastname": "LocuronaDos",
     "nickname": "LocuraDos-3000",
-    "picture": "https://img2.freepng.es/20200413/cx/transparent-icon-design-5e9514e3e94e76.6287660515868285159556.jpg",
+    "picture": "https://api.multiavatar.com/locurados.svg",
+    "interests": [
+      {
+        "questions": "¿Qué lenguajes de programación manejas?",
+        "answers": ["C#", "C++", "PHP", "Python"]
+      },
+      {
+        "questions": "¿Qué lenguajes de programación te gustaria aprender?",
+        "answers": ["C++", "Javascript", "Python"]
+      },
+      {
+        "questions": "¿A qué stack te inclinas más?",
+        "answers": ["Back-end"]
+      },
+      {
+        "questions": "¿Qué tecnologias manejas?",
+        "answers": ["React Native", "React Js", "Angular"]
+      },
+      {
+        "questions": "¿Qué idiomas te gustaría aprender o sabes?",
+        "answers": ["Inglés", "Portugués", "Alemán"]
+      },
+      {
+        "questions": "¿Qué deportes practicas?",
+        "answers": ["Atletismo", "Volleyball", "Calistenia"]
+      },
+      {
+        "questions": "¿Qué géneros de música te gustan?",
+        "answers": ["Rock", "Clásico", "Reggaeton"]
+      },
+      {
+        "questions": "¿Qué generos de películas te gustan?",
+        "answers": ["Crimen", "Musical"]
+      },
+      {
+        "questions": "¿Qué hobby practicas?",
+        "answers": ["Voluntariado", "Pintar"]
+      }
+    ],
     "email": "locuraDos.3000@hotmail.com"
   },
   {
@@ -20,7 +96,45 @@
     "firstname": "LocuraTres",
     "lastname": "LocuronaTres",
     "nickname": "LocuraTres-3000",
-    "picture": "https://cdn.pixabay.com/photo/2021/07/02/04/48/user-6380868_960_720.png",
+    "picture": "https://api.multiavatar.com/locuratres.svg",
+    "interests": [
+      {
+        "questions": "¿Qué lenguajes de programación manejas?",
+        "answers": ["C#", "C++", "PHP", "Python", "Javascript"]
+      },
+      {
+        "questions": "¿Qué lenguajes de programación te gustaria aprender?",
+        "answers": ["Java", "Javascript", "Typescript", "PHP"]
+      },
+      {
+        "questions": "¿A qué stack te inclinas más?",
+        "answers": ["Front-end"]
+      },
+      {
+        "questions": "¿Qué tecnologias manejas?",
+        "answers": ["React Js", "Angular", "Vue", "Express", "Sequelize"]
+      },
+      {
+        "questions": "¿Qué idiomas te gustaría aprender o sabes?",
+        "answers": ["Francés", "Japonés", "Italiano"]
+      },
+      {
+        "questions": "¿Qué deportes practicas?",
+        "answers": ["Gimasio", "Halterofilia", "Natación"]
+      },
+      {
+        "questions": "¿Qué géneros de música te gustan?",
+        "answers": ["Balada", "Chill & Lo-fi", "Reggae", "Reggaeton"]
+      },
+      {
+        "questions": "¿Qué generos de películas te gustan?",
+        "answers": ["Crimen", "Musical"]
+      },
+      {
+        "questions": "¿Qué hobby practicas?",
+        "answers": ["Voluntariado", "Pintar"]
+      }
+    ],
     "email": "locuraTres.3000@hotmail.com"
   },
   {
@@ -28,7 +142,52 @@
     "firstname": "LocuraCuatro",
     "lastname": "LocuronaCuatro",
     "nickname": "LocuraCuatro-3000",
-    "picture": "https://assets.stickpng.com/images/585e4bd7cb11b227491c3397.png",
+    "picture": "https://api.multiavatar.com/locuracuatro.svg",
+    "interests": [
+      {
+        "questions": "¿Qué lenguajes de programación manejas?",
+        "answers": ["C#", "Python", "Javascript", "Java"]
+      },
+      {
+        "questions": "¿Qué lenguajes de programación te gustaria aprender?",
+        "answers": [
+          "Express",
+          "Sequelize",
+          "Prisma",
+          "Redux",
+          "Bootstrap",
+          "Tailwind"
+        ]
+      },
+      {
+        "questions": "¿A qué stack te inclinas más?",
+        "answers": ["Front-end", "Full Stack"]
+      },
+      {
+        "questions": "¿Qué tecnologias manejas?",
+        "answers": ["React Js", "Redux", "Bootstrap", "jQuery"]
+      },
+      {
+        "questions": "¿Qué idiomas te gustaría aprender o sabes?",
+        "answers": ["Chino", "Inglés", "Italiano"]
+      },
+      {
+        "questions": "¿Qué deportes practicas?",
+        "answers": ["Volleyball", "Alpinismo", "Atletismo", "Calistenia"]
+      },
+      {
+        "questions": "¿Qué géneros de música te gustan?",
+        "answers": ["Ska", "Reggaeton", "Jazz", "Pop"]
+      },
+      {
+        "questions": "¿Qué generos de películas te gustan?",
+        "answers": ["Crimen", "Musical"]
+      },
+      {
+        "questions": "¿Qué hobby practicas?",
+        "answers": ["Voluntariado", "Pintar"]
+      }
+    ],
     "email": "locuraCuatro.3000@hotmail.com"
   },
   {
@@ -36,7 +195,53 @@
     "firstname": "LocuraCinco",
     "lastname": "LocuronaCinco",
     "nickname": "LocuraCinco-3000",
-    "picture": "https://cdn.icon-icons.com/icons2/1508/PNG/512/systemusers_104569.png",
+    "picture": "https://api.multiavatar.com/locuracinco.svg",
+    "interests": [
+      {
+        "questions": "¿Qué lenguajes de programación manejas?",
+        "answers": ["Javascript", "Java", "Typescript", "Python"]
+      },
+      {
+        "questions": "¿Qué lenguajes de programación te gustaria aprender?",
+        "answers": ["Java", "Javascript", "Typescript", "Python", "PHP"]
+      },
+      {
+        "questions": "¿A qué stack te inclinas más?",
+        "answers": ["Back-end", "Full Stack", "Front-end"]
+      },
+      {
+        "questions": "¿Qué tecnologias manejas?",
+        "answers": [
+          "Redux",
+          "Bootstrap",
+          "Tailwind",
+          "jQuery",
+          "Next js",
+          "MySQL",
+          "MongoDB"
+        ]
+      },
+      {
+        "questions": "¿Qué idiomas te gustaría aprender o sabes?",
+        "answers": ["Portugués", "Inglés", "Chino"]
+      },
+      {
+        "questions": "¿Qué deportes practicas?",
+        "answers": ["Senderismo", "Ciclismo", "Fútbol", "Volleyball"]
+      },
+      {
+        "questions": "¿Qué géneros de música te gustan?",
+        "answers": ["Clásico", "Chill & Lo-fi", "Rock", "Reggaeton"]
+      },
+      {
+        "questions": "¿Qué generos de películas te gustan?",
+        "answers": ["Crimen", "Musical"]
+      },
+      {
+        "questions": "¿Qué hobby practicas?",
+        "answers": ["Voluntariado", "Pintar"]
+      }
+    ],
     "email": "locuraCinco.3000@hotmail.com"
   }
 ]
